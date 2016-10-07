@@ -1,0 +1,11 @@
+NAME	= fractol
+SRC     = src/main.c src/util.c
+OBJ	= $(SRC:.c -I includes=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	gcc $(SRC) -I includes -o $(NAME) -lmlx -lXext -lX11 
+
+$(LIBFT):
+	make -C libft
