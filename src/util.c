@@ -38,7 +38,7 @@ void        mandelbrot(t_env *e)
     unsigned int    x;
     unsigned int    n;
 
-    max_iter = 50;
+    max_iter = 300;
    // is_inside = 1;
     y = 0;
     ft_init_mand(&mand);

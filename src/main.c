@@ -39,6 +39,11 @@ int     main(int argc, char **argv)
             env.fractol = mandelbrot;
             env.fractol(&env);
         }
+        if (ft_strcmp(argv[1], "julia") == 0)
+        {
+            env.fractol = julia;
+            env.fractol(&env);
+        }
         else
             error_log();
     }

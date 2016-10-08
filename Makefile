@@ -1,7 +1,7 @@
 
 NAME	= fractol
 
-SRC     = src/main.c src/util.c
+SRC     = src/main.c src/util.c src/julia.c
 
 OBJ		= $(patsubst src/%.c,obj/%.o,$(SRC))
 .SILENT:

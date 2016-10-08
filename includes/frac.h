@@ -5,8 +5,8 @@
 #include <mlx.h>
 #include "../libft/ft_printf.h"
 
-# define W_WIDTH 400
-# define W_HEIGHT 400
+# define W_WIDTH 800
+# define W_HEIGHT 600
 
 typedef struct  s_env 
 {
@@ -37,5 +37,24 @@ typedef struct			s_mandelbrot
 	long double			z_im2;
 }						t_mandelbrot;
 
+typedef struct 			s_julia
+{
+	long double			cRe;
+	long double			cIm;
+	long double			newRe;
+	long double			newIm;
+	long double			oldRe;
+	long double			oldIm;
+	long double			zoom;
+	long double			moveX;
+	long double			moveY;
+	long double			time;
+	long double			oldtime;
+	long double			frameTime;
+
+}						t_julia;
+
 void        mandelbrot(t_env *e);
+void		julia(t_env *e);
+int         get_color(unsigned int n, unsigned int max_iter);
 #endif
